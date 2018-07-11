@@ -1,7 +1,7 @@
 package com.bdqn.rlzyglxt;
 
 import com.bdqn.rlzyglxt.pojo.Student;
-import com.bdqn.rlzyglxt.service.StudentService;
+import com.bdqn.rlzyglxt.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +15,7 @@ import java.util.List;
 public class RlzyglxtApplicationTests {
 
     @Resource
-    private StudentService studentService;
+    private UserService userService;
 
     @Test
     public void contextLoads() {

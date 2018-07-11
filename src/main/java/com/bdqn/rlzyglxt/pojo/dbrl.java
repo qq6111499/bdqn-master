@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 @Document(collection = "dbrl")
@@ -13,7 +14,7 @@ public class dbrl {
     * 标志列
     * */
     @Id
-    private Integer id;
+        private BigInteger id;
     /*
    * 员工用户名
    * */
@@ -72,4 +73,142 @@ public class dbrl {
      * 应聘人员工作经验
      * */
     private String applicanExoerience;
+
+    public BigInteger getId() {
+        return id;
+    }
+
+    public void setId(BigInteger id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getIsadmin() {
+        return isadmin;
+    }
+
+    public void setIsadmin(String isadmin) {
+        this.isadmin = isadmin;
+    }
+
+    public String getConText() {
+        return conText;
+    }
+
+    public void setConText(String conText) {
+        this.conText = conText;
+    }
+
+    public Integer getApplicantId() {
+        return applicantId;
+    }
+
+    public void setApplicantId(Integer applicantId) {
+        this.applicantId = applicantId;
+    }
+
+    public String getApplicanName() {
+        return applicanName;
+    }
+
+    public void setApplicanName(String applicanName) {
+        this.applicanName = applicanName;
+    }
+
+    public String getApplicanSex() {
+        return applicanSex;
+    }
+
+    public void setApplicanSex(String applicanSex) {
+        this.applicanSex = applicanSex;
+    }
+
+    public String getApplicanAge() {
+        return applicanAge;
+    }
+
+    public void setApplicanAge(String applicanAge) {
+        this.applicanAge = applicanAge;
+    }
+
+    public String getApplicanJob() {
+        return applicanJob;
+    }
+
+    public void setApplicanJob(String applicanJob) {
+        this.applicanJob = applicanJob;
+    }
+
+    public String getApplicanspeciaty() {
+        return applicanspeciaty;
+    }
+
+    public void setApplicanspeciaty(String applicanspeciaty) {
+        this.applicanspeciaty = applicanspeciaty;
+    }
+
+    public String getApplicanExoerience() {
+        return applicanExoerience;
+    }
+
+    public void setApplicanExoerience(String applicanExoerience) {
+        this.applicanExoerience = applicanExoerience;
+    }
+
+    public dbrl(BigInteger id, String userName, String password, String sex, Date birthday, String createTime, String isadmin, String conText, Integer applicantId, String applicanName, String applicanSex, String applicanAge, String applicanJob, String applicanspeciaty, String applicanExoerience) {
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
+        this.sex = sex;
+        this.birthday = birthday;
+        this.createTime = createTime;
+        this.isadmin = isadmin;
+        this.conText = conText;
+        this.applicantId = applicantId;
+        this.applicanName = applicanName;
+        this.applicanSex = applicanSex;
+        this.applicanAge = applicanAge;
+        this.applicanJob = applicanJob;
+        this.applicanspeciaty = applicanspeciaty;
+        this.applicanExoerience = applicanExoerience;
+    }
 }
