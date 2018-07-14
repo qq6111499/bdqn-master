@@ -8,13 +8,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigInteger;
 import java.util.Date;
 
-@Document(collection = "dbrl")
-public class dbrl {
+@Document(collection = "users")
+public class Users {
     /*
     * 标志列
     * */
     @Id
-        private BigInteger id;
+    private BigInteger id;
     /*
    * 员工用户名
    * */
@@ -194,7 +194,7 @@ public class dbrl {
         this.applicanExoerience = applicanExoerience;
     }
 
-    public dbrl(BigInteger id, String userName, String password, String sex, Date birthday, String createTime, String isadmin, String conText, Integer applicantId, String applicanName, String applicanSex, String applicanAge, String applicanJob, String applicanspeciaty, String applicanExoerience) {
+    public Users(BigInteger id, String userName, String password, String sex, Date birthday, String createTime, String isadmin, String conText, Integer applicantId, String applicanName, String applicanSex, String applicanAge, String applicanJob, String applicanspeciaty, String applicanExoerience) {
         this.id = id;
         this.userName = userName;
         this.password = password;

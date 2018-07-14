@@ -1,11 +1,8 @@
 package com.bdqn.rlzyglxt.service.impl;
 
 import com.bdqn.rlzyglxt.dao.UserDao;
-import com.bdqn.rlzyglxt.pojo.Student;
-import com.bdqn.rlzyglxt.pojo.dbrl;
+import com.bdqn.rlzyglxt.pojo.Users;
 import com.bdqn.rlzyglxt.service.UserService;
-import org.apache.catalina.User;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,7 +16,17 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public dbrl findUser(String userName, String passWord) {
+    public Users findUser(String userName, String passWord) {
         return this.userDao.findUser(userName, passWord);
+    }
+
+    @Override
+    public List<Users> selectUsersAll() {
+        return userDao.selectUsersAll();
+    }
+
+    @Override
+    public void insertUsers(Users users) {
+        this.userDao.insertUsers(users);
     }
 }
