@@ -16,11 +16,9 @@ public class UserController {
     private UserService userService;
 
 
-
     @RequestMapping(value = "/login.do")
     public Users license(HttpServletResponse response, String userName, String passWord) {
         response.setHeader("Access-Control-Allow-Origin", "*");//解决跨域请求
-        System.out.println("1");
         return userService.findUser(userName, passWord);
     }
 

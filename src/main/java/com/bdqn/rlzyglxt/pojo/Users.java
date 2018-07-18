@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigInteger;
 import java.util.Date;
 
-@Document(collection = "users")
+@Document(collection = "dbrl")
 public class Users {
     /*
     * 标志列

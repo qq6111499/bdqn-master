@@ -1,6 +1,7 @@
 package com.bdqn.rlzyglxt.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.util.Date;
 @Document(collection = "job")
 public class Job implements Serializable{
     //应聘人员信息
+    @Id
     private Integer id;
     //应聘人员姓名
     private String name;

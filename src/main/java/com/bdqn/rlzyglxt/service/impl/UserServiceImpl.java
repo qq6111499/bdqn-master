@@ -22,6 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<Users> selectUsersAll() {
+        System.out.println("1");
         return userDao.selectUsersAll();
     }
 
